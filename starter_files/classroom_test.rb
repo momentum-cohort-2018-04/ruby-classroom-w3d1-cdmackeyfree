@@ -1,4 +1,5 @@
 require 'minitest/autorun'
+require 'minitest/nyan_cat'
 require_relative 'classroom'
 
 DATA = {
@@ -25,10 +26,10 @@ class ClassroomTest < Minitest::Test
     assert_equal 75, assignment_score(DATA, :indiana, 10)
   end
 
-  # def test_assignment_scores
-  #   assert_equal [82, 84, 55, 58, 72, 92, 92, 74, 55, 96], assignment_scores(DATA, 2)
-  #   assert_equal [81, 60, 67, 82, 68, 60, 73, 89, 82, 95], assignment_scores(DATA, 9)
-  # end
+  def test_assignment_scores
+    assert_equal [82, 84, 55, 58, 72, 92, 92, 74, 55, 96], assignment_scores(DATA, 2)
+    assert_equal [81, 60, 67, 82, 68, 60, 73, 89, 82, 95], assignment_scores(DATA, 9)
+  end
 
   # def test_assignment_average_score
   #   assert_equal 80, assignment_average_score(DATA, 4)
