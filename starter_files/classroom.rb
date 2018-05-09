@@ -38,6 +38,14 @@ end
 # TIP: To convert an array like [[:indiana, 90], [:nevada, 80]] to a hash,
 # use .to_h. Also look at Hash#transform_values.
 
+def averages(hash)
+    hash.map do |key, value|
+        grade_array = [key]value
+        sum = grade_array.reduce(0) { |x, y| x + y }
+        average = sum/grade_array.length
+    end
+end
+
 
 # Return a letter grade for a numerical score.
 # 90+ => A

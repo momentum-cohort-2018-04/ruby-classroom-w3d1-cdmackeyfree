@@ -16,10 +16,10 @@ DATA = {
 }
 
 class ClassroomTest < Minitest::Test
-  # def test_averages
-  #   assert_equal 91, averages(DATA)[:remy]
-  #   assert_equal 70, averages(DATA)[:dorian]
-  # end
+  def test_averages
+    assert_equal 91, averages(DATA)[:remy]
+    assert_equal 70, averages(DATA)[:dorian]
+  end
 
   def test_assignment_score
     assert_equal 55, assignment_score(DATA, :ryan, 2)
